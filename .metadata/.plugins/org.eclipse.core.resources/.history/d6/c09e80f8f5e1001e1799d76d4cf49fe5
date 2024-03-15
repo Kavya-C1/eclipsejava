@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Welcome to JS</h1>
+<%String name = "Sri";
+out.println("welcome "+name);
+%>
+
+<%int x=10,y=20; %>
+<%out.println("Sum "+(x+y)); %>
+
+<%String name1 = "Srilk";%>
+<%="welcome "+name1%>
+<%="Sum "+(x+y)%>
+
+<%int counter=1; %>
+<%counter++; %>
+
+
+</body>
+</html>

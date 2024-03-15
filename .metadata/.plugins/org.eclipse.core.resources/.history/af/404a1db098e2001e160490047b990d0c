@@ -1,0 +1,5 @@
+package com.doctorapp.exceptions;
+
+public class DoctorNotFoundException {
+
+}

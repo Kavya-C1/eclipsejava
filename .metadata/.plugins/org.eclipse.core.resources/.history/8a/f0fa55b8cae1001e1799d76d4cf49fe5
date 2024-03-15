@@ -1,0 +1,20 @@
+package com.movieapp.service;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class MovieDetails {
+	
+	List<String> showMovies(String lang){
+		List<Movies> movies= new ArrayList<>(); 
+			if(lang.equals("kannada"))
+				return  Arrays.asList("SSE","KGF","Kantara");
+			else if(lang.equals("english"))
+				return  Arrays.asList("avatar","ironman","marvel");
+			else if(lang.equals("hindi"))
+				return  Arrays.asList("zero","yjyd","3 idiots");
+		
+	}
+
+}

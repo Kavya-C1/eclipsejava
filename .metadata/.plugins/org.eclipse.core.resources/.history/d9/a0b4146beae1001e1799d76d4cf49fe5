@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+empname
+empid
+salary
+city
+
+
+empservlet
+//get all values
+---
+//create emp obj
+call set method to set all values
+request.setattribute(em,emp)
+request.dispatcher
+
+employee
+name
+id
+sal,city
+
+//def cons,para,tpstr, gs
+
+
+<form action="employeeServlet">
+Enter Name<input type="text" name="employeeName">
+Enter EmpId<input type="text" name="employeeId">
+Salary<input type="text" name="salary">
+City<input type="text" name="city">
+</form>
+
+
+</body>
+</html>

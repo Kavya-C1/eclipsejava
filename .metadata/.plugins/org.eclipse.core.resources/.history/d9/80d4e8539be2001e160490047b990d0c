@@ -1,0 +1,88 @@
+package com.doctorapp.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.List;
+
+import com.doctorapp.model.Doctor;
+
+public class DoctorRepositoryImpl implements IDoctorRepository{
+
+	@Override
+	public void addDoctor(Doctor doctor) {
+		// TODO Auto-generated method stub
+		 try(Connection connection = DoctorDb.OpenConnection();
+		            PreparedStatement statement = connection.prepareStatement(Queries.INSERTQUERY);
+		            ){
+		            statement.setString(1,doctor.getDoctorName());
+		            statement.setString(2,doctor.getSpeciality());
+		            statement.setInt(3,doctor.getExperience());
+		            statement.setInt(4,doctor.getRatings());
+		            statement.setDouble(5,doctor.getFees());
+		            //call execute
+		            boolean result = statement.execute();
+		            System.out.println("One row inserted "+!result);
+
+
+		        } catch (Exception e) {
+		           e.printStackTrace();
+		        }
+	}
+
+	@Override
+	public void updateDoctor(int doctorId, double fees) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteDoctor(int doctorId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Doctor findById(int doctorId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Doctor> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Doctor> findBySpeciality(String speciality) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Doctor> findBySpecialityAndExp(String speciality, int experience) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Doctor> findBySpecialityAndLessFees(String speciality, double fees) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Doctor> findBySpecialityAndRatings(String speciality, int ratings) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Doctor> findBySpecialityAndNameContains(String speciality, String doctorName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}
